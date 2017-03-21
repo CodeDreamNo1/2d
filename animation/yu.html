@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>下雨</title>
+		<style>
+			body,
+			html {
+				background: #000;
+				overflow: hidden;
+			}
+			
+		</style>
+	</head>
+
+	<body>
+	</body>
+	<script type="text/javascript">
+		window.onload = function() {
+			var w = document.documentElement.clientWidth;
+			var h = document.documentElement.clientHeight;
+			var body = document.getElementsByTagName("body")[0]
+			var arr = [];
+			for(var i = 0; i < 100; i++) {
+				var yu = document.createElement("div")
+				var time = 4 * Math.random()
+				yu.innerText="*"
+				yu.style.cssText ="font-size:28px;color:white;position:absolute;left:" + ((w - 100) * Math.random() + 50) + "px;top:-20px;transition:3s transform linear " + time + "s"
+				body.appendChild(yu)
+				arr.push(yu)
+			}
+			setTimeout(function() {
+				for(var i = 0; i < arr.length; i++) {
+					arr[i].style.transform = "translate(0px," + h + "px)"
+					arr[i].addEventListener("webkitTransitionEnd", function() {
+						this.style.transition = "none"
+						this.style.transform = "translate(0px,0px)"
+						var that = this;
+						setTimeout(function() {
+							that.style.transition = "2s transform linear " + time + "s"
+							that.style.transform = "translate(0px," + h + "px)"
+						}, 0)
+
+					})
+				}
+			}, 0)
+			
+		}
+//		setInterval(function(speed,deg){
+//			
+//		},4000)
+	</script>
+
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>时钟</title>
+		<style>
+			.body{
+				width:400px;
+				height:400px;
+				background:url(QQ图片20170303095939.jpg) no-repeat center center;
+				background-size:cover;
+				border:2px solid #fff;
+				position:fixed;
+				left: 0;
+				top:0;
+				right: 0;
+				bottom: 0;
+				margin:auto;
+				border-radius:50%;
+				box-shadow:30px 30px 200px rgba(0,0,0,1) inset;
+			}
+			.kd{
+				width:6px;
+				height:8px;
+				background:#fff;
+				position: absolute;
+				left:197px;
+				transform-origin:center 200px;
+				border-radius:20px;
+			}
+			.xin{
+				width:60px;
+				height:60px;
+				border-radius:50%;
+				position: absolute;
+				left:5px;
+				bottom:0;
+				right: 0;
+				top: 0;
+				margin: auto;
+				background:rgba(255,255,255,.5);
+				z-index:10;
+				box-shadow:0px 0px 15px rgba(255,255,255,.6);
+			}
+			.zz{
+				width:400px;
+				height:400px;
+				position:fixed;
+				border-radius:50%;
+				
+				left: 0;
+				top:0;
+				right: 0;
+				bottom: 0;
+				margin:auto;
+				z-index:30;
+				background:rgba(0,0,0,.5);
+			}
+		</style>
+	</head>
+	<body>
+		
+		<div class="zz"></div>
+		<div class="body">
+			<div class="xin">
+				
+			</div>
+		</div>
+
+	</body>
+	<script type="text/javascript">
+		window.onload=function(){
+			var body=document.getElementsByClassName("body")[0]
+			for(var i=1;i<=60;i++){
+				if(i%5==0){
+				   var widths=6;
+				   var heights=15;
+				}else{
+					var widths=6;
+					var heights=6;
+				}
+				var kd=document.createElement("div");
+				kd.className="kd";
+				kd.style.height=heights+"px";
+				kd.style.transform="rotate("+i*6+"deg)"
+				body.appendChild(kd)
+			}
+			//表针的部分
+			var sz=setbz(10,60,"#fff",30)
+			var fz=setbz(7,100,"#fff",6)
+			var mz=setbz(4,140,"#fff",6)
+			mz.style.background="#ec0035"
+			function setbz(w,h,c,a){
+				var bz=document.createElement("div");
+				bz.style.transformOrigin="center bottom";
+				var lefts=(400-w)/2+"px";
+				bz.style.cssText="position:absolute;left:"+lefts+";top:"+(200-h)+"px;height:"+h+"px;width:"+w+"px;background:"+c+";transform-origin:center bottom;transform:rotate("+a+"deg);border-radius:20%;z-index:100"
+			    body.appendChild(bz)
+			    return bz;
+			}
+			setInterval(function(){
+				var times=new Date();
+				var hour=times.getHours();
+				var min=times.getMinutes();
+				var sec=times.getSeconds();
+				sz.style.transform="rotate("+(hour*30+min*6/12)+"deg)"
+				fz.style.transform="rotate("+min*6+"deg)"
+				mz.style.transform="rotate("+sec*6+"deg)"
+			},1000)
+		}
+	</script>
+</html>

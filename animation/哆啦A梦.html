@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>哆啦A梦来啦~~~~</title>
+		<style type="text/css">
+		    .center{
+		    	position:absolute;
+				left: 0;
+				right: 0;
+				top:0;
+				bottom:0;
+				margin:auto;
+		    }
+		    .topcenter{
+		    	position:absolute;
+				left: 0;
+				right: 0;
+				top:0;
+				margin:auto;
+		    }
+		    .bottomcenter{
+		    	position:absolute;
+				left: 0;
+				right: 0;
+				bottom:0;
+				margin:auto;
+		    }
+			.box{
+				width:500px;
+				height:600px;
+				border: 1px solid #000;
+			}
+			.head{
+				width:300px;
+				height:310px;
+				border-radius: 50%;
+				background:linear-gradient(30deg,#0294e9 20%,#2f89be 80%);
+				border:1px solid #333;
+			}
+			.face{
+				width:260px;
+				height:230px;
+				bottom:5px;
+				border-radius:50%;
+				background: #fafafa;
+				position: absolute;
+			}
+			.yan{
+				position: absolute;
+				left:0;
+				right:0;
+				top:-19px
+			}
+			.lyan{
+				width:60px;
+				height:70px;
+				position: absolute;
+				left:68px;
+				border-radius:50%;
+				border:1px solid #aeaeae;
+				background: #fafafa;
+				transition:transform 2s ease;
+				animation: dong 2s ease infinite;
+			}
+			.t{
+				width:20px;
+				height:20px;
+				border:1px solid #000000;
+				border-radius:50%;
+				background:linear-gradient(#474545 5%,#000 95%);
+				position: absolute;
+				left: 5px;
+				top:19px
+			}
+			
+			.ryan{
+				width:60px;
+				height:70px;
+				position: absolute;
+				right:68px;
+				border-radius:50%;
+				border:1px solid #aeaeae;
+				background: #fafafa;
+				transition:transform 2s ease;
+				animation: dong 2s ease infinite;	
+			}
+			@keyframes dong{
+				0%{
+					transform:translateY(10px);
+				}
+				20%{
+					transform:translateX(10px);
+				}
+				40%{
+					transform:translateY(-10px);
+				}
+				60%{
+					transform:translateX(-10px);
+				}
+				80%{
+					transform:translateY(20px);
+					
+				}
+				100%{
+					transform:translate(0px);
+					
+				}
+			}
+			.bizi{
+				width:35px;
+				height: 35px;
+				background:radial-gradient(at -10px -10px,#f10021,#c2092b);				
+				border-radius:50%;
+				position: absolute;
+				left:0px;
+				right: 0;
+				margin: auto;
+				top:30px;
+			}
+			.dd{
+				width:10px;
+				height: 10px;
+				border-radius:50%;
+				position: absolute;
+				left:8px;
+				top:9px;
+				box-shadow:0px 0px 15px #ffc5ce;
+				background:radial-gradient(at -10px -10px,#ff9899,#ffc5ce);
+			}
+			.line{
+				width:2px;
+				height:70px;
+				background:#8c8c8c;
+				position: absolute;
+				left:0;
+				right:0;
+				margin: auto;
+				top:65px
+			}
+			.zui{
+				width:130px;
+				height:70px;
+				position: absolute;
+				left: 0;
+				right: 0;
+				margin: auto;
+				top:65px;
+				/*background:#8c8c8c;*/
+				border-radius:50%;
+				border-bottom:1px solid #8C8C8C
+			}
+			.huzi{
+				
+			}
+			.huzi1{
+				width:90px;
+				height: 2px;
+				background:#666;
+				position: absolute;
+				top:70px;
+				transform-origin:right right;
+				transform:rotateZ(10deg);
+			}
+			.huzi2{
+				width:90px;
+				height: 2px;
+				background:#666;
+				position: absolute;
+				top:90px;
+			}
+			.huzi3{
+				width:90px;
+				height: 2px;
+				background:#666;
+				position: absolute;
+				top:110px;
+				transform:rotateZ(-10deg);
+				
+			}
+			.huzi22{
+				position: absolute;
+				top:180px;
+				right:0 ;
+				transform-origin:right right;
+				transform:rotateZ(180deg);
+				
+			}
+			.weibo{
+				width:240px;
+				height: 25px;
+				background:linear-gradient(180deg,#e70f2d,#e02e46);
+				position: absolute;
+				left:0;
+				right: 0;
+				top:180px;
+				margin: auto;
+				border-radius:50px;		
+				border:1px solid #333;	
+				z-index: 2;	
+			}
+			.ling{
+				width:35px;
+				height: 35px;
+				border-radius:50%;
+				background:linear-gradient(45deg,#eddd26,#cea506);
+				border:2px solid #222;
+				position: absolute;
+				left: 0;
+				right: 0;
+				top:188px;
+				margin: auto;
+				z-index: 2;
+			}
+			.ling1{
+				width:94%;
+				height:4px;
+				border:2px solid #333;
+				border-radius:10px;
+				position: absolute;
+				top: 6px;
+			}
+			.ling2{
+				width:8px;
+				height:8px;
+				background:#000;
+				position: absolute;
+				left: 0;
+				right: 0;
+				margin: auto;
+				border-radius:50%;
+				top:52%
+			}
+			.ling3{
+				width:3px;
+				height:10px;
+				background:#000;
+				border-radius:2px;
+				position: absolute;
+				left: 0;
+				right: 0;
+				margin: auto;
+				top:75%
+			}
+			.body{
+				width: 220px;
+				height:200px;
+				background:linear-gradient(#0294e9,#2f89be);
+	            position: absolute;
+	            left:0;
+	            top:166px;
+	            right: 0;
+	            bottom:0;
+	            margin: auto;
+	            border:1px solid #333;
+			}
+			.x1{
+				width:1px;
+				height:33px;
+				background:#0294e9;
+				position: absolute;
+				left:-1px;
+			}
+			.x2{
+				width:1px;
+				height:33px;
+				background:#0294e9;
+				position: absolute;
+				right:-1px;
+			}
+			.lgb{
+				width:40px;
+				height:130px;
+				background:linear-gradient(#0294e9,#2f89be);
+                position: absolute;
+                top:274px;
+                left:80px;
+                border:1px solid #333;
+                transform: rotateZ(50deg);
+                z-index: -1;
+			}
+			.rgb{
+				width:40px;
+				height:130px;
+				background:linear-gradient(#0294e9,#2f89be);
+                position: absolute;
+                top:274px;
+                right:80px;
+                border:1px solid #333;
+                transform: rotateZ(-50deg);
+                z-index: -1;
+			}
+			.lshou{
+				width:50px;
+				height: 50px;
+				background: #FAFAFA;
+				border:2px solid #333;
+				border-radius:50%;
+				position: absolute;
+				/*right: 0;*/
+				bottom:-30px;
+				left:-5px;
+			}
+			.dang{
+				width:20px;
+				height: 20px;
+				border-radius:50%;
+				position: absolute;
+				left: 0;
+				right: 0;
+				bottom:-10px;
+				margin: auto;
+				background:#fff;
+			}
+			.duzi{
+				width:190px;
+				height:210px;
+				border-radius:50%;
+				background:#FAFAFA;
+				position:absolute;
+				left: 0;
+				right:0;
+				top:-60px;
+				margin: auto;
+				z-index:0;
+			}
+			.koudai{
+				width:100px;
+				height: 100px;
+				border: 2px solid #333;
+				position:absolute;
+				left: 0;
+				right: 0;
+				top: 40px;
+				bottom: 0;
+				margin: auto;
+				border-radius:50%;
+			}
+			.koudai1{
+				width:104px;
+				height: 50px;
+				border-bottom: 3px solid #333;
+				background: #FAFAFA;
+				position:absolute;
+				left: 0;
+				right: 0;
+				top:-5px;
+				bottom: 0;
+				margin: auto;
+				/*border-radius:50%;*/
+			}
+			.footer1{
+				width:110px;
+				height:20px;
+				background:#FAFAFA;
+				border:2px solid #333;
+				position: absolute;
+				bottom:-20px;
+				left:-10px;
+				border-radius:10px;
+				transform: skewX(-10deg);
+			}
+			.footer2{
+				width:110px;
+				height:20px;
+				background:#FAFAFA;
+				border:2px solid #333;
+				position: absolute;
+				bottom:-20px;
+				right:-10px;
+				border-radius:10px;
+				transform: skewX(10deg);
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box center">
+			<div class="head topcenter">
+				<div class="face bottomcenter">
+					<div class="yan">
+						<div class="lyan"><div class="t"></div></div>
+					    <div class="ryan"><div class="t"></div></div>
+					</div>
+					<div class="bizi"><div class="dd"></div></div>
+					<div class="line"></div>
+					<div class="huzi">
+					<div class="huzi1"></div>
+					<div class="huzi2"></div>
+					<div class="huzi3"></div>
+					</div>
+					<div class="huzi22">
+					<div class="huzi1"></div>
+					<div class="huzi2"></div>
+					<div class="huzi3"></div>
+					</div>
+					<div class="zui"></div>
+					<div class="weibo"></div>
+					<div class="ling">
+						<div class="ling1"></div>
+						<div class="ling2"></div>
+						<div class="ling3"></div>
+					</div>
+				</div>
+			</div>
+			<div class="body">
+				 <div class="x1"></div>
+				 <div class="x2"></div> 
+		         <div class="dang"></div>
+		         <div class="duzi">
+		         	<div class="koudai"></div>
+		         	<div class="koudai1"></div>
+		         </div>
+				 <div class="footer1">
+				
+				</div>
+				<div class="footer2">
+					
+				</div>
+			</div>
+			<div class="lgb"><div class="lshou"></div></div>
+		    <div class="rgb"><div class="lshou"></div></div>
+
+			
+		</div>
+	</body>
+</html>
